@@ -48,4 +48,8 @@ public class TodoService {
         TodoEntity savedEntity = repository.findById(entity.getId()).get();
         return savedEntity.getTitle();
     }
+
+    public List<TodoEntity> retrieve(final String userId) {
+        return repository.findByUserId(userId);
+    }
 }
