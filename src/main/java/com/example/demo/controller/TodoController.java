@@ -47,6 +47,20 @@ public class TodoController {
         }
     }
 
+    @GetMapping
+    public ResponseEntity<?> retrieveTodoList() {
+        String temporaryUserId = "temporary-user";
+
+        // 서비스 메서드의 retrieve 메서드를 사용하여 Todo 리스트를 가져온다
+        List<TodoEntity> entities = service.retrieve(temporaryUserId);
+
+        List<TodoDTO> dtos = entities.stream().map(TodoDTO::new).collect(Collectors.toList());
+
+        ResponseDTO<TodoDTO> response = ResponseDTO.<TodoDTO>builder().data(dtos).build();
+
+        return ResponseEntity.ok().body(response);
+    }
+
     @GetMapping("/test")
     public ResponseEntity<?> testTodo() {
         String str = service.testService();
