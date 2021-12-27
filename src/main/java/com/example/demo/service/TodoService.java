@@ -67,6 +67,23 @@ public class TodoService {
         return retrieve(entity.getUserId());
     }
 
+    public List<TodoEntity> delete(final TodoEntity entity) {
+        // 저장할 엔티티가 유효한지 확인
+        validate(entity);
+
+        try {
+            // 엔티티를 삭제
+            repository.delete(entity);
+        } catch (Exception e) {
+            log.error("error deleting entity", entity.getId(), e);
+
+            throw new RuntimeException("error deleting entity " + entity.getId());
+        }
+
+        // 새 Todo 리스트 리턴
+        return retrieve(entity.getUserId());
+    }
+
     public List<TodoEntity> retrieve(final String userId) {
         return repository.findByUserId(userId);
     }
