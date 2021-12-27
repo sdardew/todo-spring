@@ -54,10 +54,13 @@ public class TodoController {
         // 서비스 메서드의 retrieve 메서드를 사용하여 Todo 리스트를 가져온다
         List<TodoEntity> entities = service.retrieve(temporaryUserId);
 
+        // stream을 사용하여 리턴된 엔티티 리스트를 TodoDTO 리스트로 변환
         List<TodoDTO> dtos = entities.stream().map(TodoDTO::new).collect(Collectors.toList());
 
+        // 변환된 TodoDTO 리스트를 사용하여 ResponseDTO 초기화
         ResponseDTO<TodoDTO> response = ResponseDTO.<TodoDTO>builder().data(dtos).build();
 
+        // ResponseDTO 리턴
         return ResponseEntity.ok().body(response);
     }
 

@@ -34,7 +34,7 @@ public class TodoService {
         }
 
         if(entity.getUserId() == null) {
-            log.warn("Uknown user.");
+            log.warn("Unknown user.");
             throw new RuntimeException("Unknown User.");
         }
     }
@@ -47,6 +47,11 @@ public class TodoService {
         // TodoEntity 검색
         TodoEntity savedEntity = repository.findById(entity.getId()).get();
         return savedEntity.getTitle();
+    }
+
+    public List<TodoEntity> update(final TodoEntity entity) {
+        // 저장할 엔티티의 유효성 확인
+        validate(entity);
     }
 
     public List<TodoEntity> retrieve(final String userId) {
