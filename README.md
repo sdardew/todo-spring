@@ -1,25 +1,14 @@
 # 📝 todo-spring
 ![Java](https://img.shields.io/badge/java-1.8-%236DB33F?style=flat&logo=java)
-![Javascript](https://img.shields.io/badge/javascript-1.8-%236DB33F?style=flat&logo=javascript)
+![Javascript](https://img.shields.io/badge/javascript-ES6-%236DB33F?style=flat&logo=javascript)
 ![SpringBoot](https://img.shields.io/badge/springboot-2.5.7-%236DB33F?style=flat&logo=springboot)
 ![SpringSecurity](https://img.shields.io/badge/springsecurity-1.8-%236DB33F?style=flat&logo=springsecurity)
 ![Node.js](https://img.shields.io/badge/node.js-16.13.1-%236DB33F?style=flat&logo=node.js)
 
   
-할 일을 기록하는 웹 애플리케이션의 백엔드
+> 할 일을 기록하는 웹 애플리케이션 서버  
+> Web application server that records what to do
 
-
-## ✏️ STACK
-![Java](https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white)
-![Spring Security](https://img.shields.io/badge/SpringSecurity-6DB33F?style=for-the-badge&logo=SpringSecurity&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
-
-
-- Programming Language: `Java11`
-- IDE
-  - IntelliJ
-  - Postman
  
 ## ✏️ How To Run
 1. Download the frontend [todo-react-app](https://github.com/sdardew/todo-react-app.git) and the backend [todo-spring](https://github.com/sdardew/todo-spring).
